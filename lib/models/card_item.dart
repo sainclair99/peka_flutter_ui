@@ -7,6 +7,9 @@ class CardItem {
   String name;
   String fname;
   String lname;
+  String? ratio;
+  String? preference;
+  String? agenceName;
 
   CardItem({
     required this.date,
@@ -17,5 +20,8 @@ class CardItem {
     required this.name,
     required this.fname,
     required this.lname,
+    this.ratio,
+    this.preference,
+    this.agenceName,
   });
 }

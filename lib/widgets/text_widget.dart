@@ -5,10 +5,16 @@ class TextWidget extends StatelessWidget {
     super.key,
     required this.text,
     this.color,
+    this.fontSize,
+    this.fontWeight,
+    this.fontStyle,
   });
 
   final String text;
   final Color? color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  final FontStyle? fontStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +22,11 @@ class TextWidget extends StatelessWidget {
       text,
       style: TextStyle(
         color: color ?? Colors.white,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
+        fontSize: fontSize ?? 18,
+        fontWeight: fontWeight ?? FontWeight.bold,
+        fontStyle: fontStyle,
       ),
+      overflow: TextOverflow.clip,
     );
   }
 }
